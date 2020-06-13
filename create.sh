@@ -2,14 +2,14 @@
 
 function create_new_question()
 {
-  if [[ -n "$1" && -n "$2" ]]
+	if [[ -n "$1" && -n "$2" ]]
 	then
-	  echo $1
-	  q=`echo $2 | cut -d '/' -f5`
-    src=${q//'-'/'_'}
-    mkdir -p "src/$1_$src"
-    echo "package solution" > "src/$1_$src/$src.go"
-    echo "package solution" > "src/$1_$src/${src}_test.go"
+		echo $1
+		q=`echo $2 | cut -d '/' -f5`
+		src=${q//'-'/'_'}
+		mkdir -p "src/$1_$src"
+		echo "package solution" > "src/$1_$src/$src.go"
+		echo "package solution" > "src/$1_$src/${src}_test.go"
 	else
 		echo "Error: missing required parameters."
 		echo "Usage: "
