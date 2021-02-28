@@ -1,8 +1,8 @@
 module github.com/nimrc/leetcode
 
-go 1.14
+go 1.16
 
 require (
-	github.com/fyibmsd/leetcode v0.0.0-20200613031331-b2f3473b9d1e
-	github.com/stretchr/testify v1.4.0
+	github.com/davecgh/go-spew v1.1.1
+	github.com/stretchr/testify v1.7.0
 )

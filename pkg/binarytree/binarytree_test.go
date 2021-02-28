@@ -1,11 +1,11 @@
-package common
+package binarytree
 
 import (
 	"reflect"
 	"testing"
 )
 
-func TestBuild(t *testing.T) {
+func TestBuildTree(t *testing.T) {
 	type args struct {
 		tree []int
 	}
@@ -32,7 +32,7 @@ func TestBuild(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Build(tt.args.tree); !reflect.DeepEqual(got, tt.want) {
+			if got := BuildTree(tt.args.tree); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("Build() = %v, want %v", got, tt.want)
 			}
 		})

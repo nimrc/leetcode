@@ -1,9 +1,9 @@
-package solution
+package _003_longest_substring_without_repeating_characters
 
 func lengthOfLongestSubstring(s string) int {
-	left, ans := 0, 0
+	var left, ans int
 
-	m := map[byte]int{}
+	var m = make(map[byte]int)
 
 	for i := 0; i < len(s); i++ {
 		if v, exist := m[s[i]]; exist && left < v {

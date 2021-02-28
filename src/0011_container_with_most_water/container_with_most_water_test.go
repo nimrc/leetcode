@@ -1,4 +1,4 @@
-package solution
+package _011_container_with_most_water
 
 import "testing"
 
@@ -21,10 +21,8 @@ func TestMaxArea(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			for _, maxArea := range solutions {
-				if got := maxArea(tt.args.height); got != tt.want {
-					t.Errorf("maxArea() = %v, want %v", got, tt.want)
-				}
+			if got := maxArea(tt.args.height); got != tt.want {
+				t.Errorf("maxArea() = %v, want %v", got, tt.want)
 			}
 		})
 	}
