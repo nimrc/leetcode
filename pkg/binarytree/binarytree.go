@@ -15,6 +15,10 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+func NewTreeNode(val int) *TreeNode {
+	return &TreeNode{Val: val}
+}
+
 func PrintTree(root *TreeNode) {
 	curr := root
 	q := make([]*TreeNode, 0)
@@ -35,7 +39,7 @@ func PrintTree(root *TreeNode) {
 	spew.Dump(q)
 }
 
-func BuildTree(values []int) *TreeNode {
+func NewTree(values []int) *TreeNode {
 	if len(values) == 0 {
 		return nil
 	}

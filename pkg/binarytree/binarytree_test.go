@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestBuildTree(t *testing.T) {
+func TestNewTree(t *testing.T) {
 	type args struct {
 		tree []int
 	}
@@ -32,8 +32,8 @@ func TestBuildTree(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := BuildTree(tt.args.tree); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("Build() = %v, want %v", got, tt.want)
+			if got := NewTree(tt.args.tree); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("NewTree() = %v, want %v", got, tt.want)
 			}
 		})
 	}

@@ -9,6 +9,7 @@ function create_new_question()
 		src=${q//'-'/'_'}
 		mkdir -p "src/$1_$src"
 		echo "package solution" > "src/$1_$src/$src.go"
+		echo "// @link $2" >> "src/$1_$src/$src.go"
 		echo "package solution" > "src/$1_$src/${src}_test.go"
 	else
 		echo "Error: missing required parameters."
