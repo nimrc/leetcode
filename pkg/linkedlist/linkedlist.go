@@ -18,6 +18,18 @@ func NewList(values []int) *ListNode {
 	}
 }
 
+func (list *ListNode) Append(head *ListNode) *ListNode {
+	curr := list
+
+	for curr.Next != nil {
+		curr = curr.Next
+	}
+
+	curr.Next = head
+
+	return list
+}
+
 func (list *ListNode) Dump() {
 	for curr := list; curr != nil; curr = curr.Next {
 		fmt.Printf("%d", curr.Val)
